@@ -1,0 +1,32 @@
+.adminPage-container{
+    display: block;
+    margin: auto;
+}
+
+.btnn{
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 280px;
+    margin-bottom:10px;
+    opacity: 0.8;
+    margin: 5px;
+}
+
+.studentCrud{
+    display:none;
+}
+  
+.studentList{
+    display:none;
+}
+  
+.staffCrud{
+    display:none;
+}
+  
+.staffList{
+    display:none;
+}

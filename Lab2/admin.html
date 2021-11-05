@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Lab2</title>
+</head>
+<body>
+    <h1>Welcome to the Admin Dashboard</h1>
+    <div class="adminPage" id="adminPage">
+        <!--Add Student form-->
+        <div class="form-popup" id="addStudentForm">
+            <form class="form-container" onsubmit="return false">
+    
+                <label for="studentid"><b>Student ID*</b></label>
+                <input type="text" placeholder="Enter Student ID" name="idStudent" id="idStudent" required >
+    
+                <label for="studentfname"><b>First Name*</b></label>
+                <input type="text" placeholder="Enter First Name" name="firstNameStudent" id="firstnameStudent" required>
+    
+                <label for="studentlname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lastNameStudent" id="lastnameStudent">
+    
+                <label for="studentdob"><b>Date of Birth</b></label>
+                <input type="date" name="dobStudent" id="dobStudent" >
+    
+                <fieldset>
+                    <label for="studentgender"><b>Gender</b></label><br>
+                    <input type="radio" value="Male" name="genderStudent" id="genderStudent" >
+                    <label>Male</label>
+                    <input type="radio" value="Female" name="genderStudent" id="genderStudent" >
+                    <label>Female</label>
+                </fieldset>
+    
+                <label><b>Department*</b></label><br>
+                <select name="departmentstudent" id="departmentStudent" required >
+                    <option value="AI">AI</option>
+                    <option value="CS">CS</option>
+                    <option value="Jura">Jura</option>
+                </select><br>
+    
+                <label for="studentemail"><b>Email*</b></label><br>
+                <input type="email" placeholder="Enter Email" name="emailStudent" id="emailStudent" required >
+    
+                <button type="submit" class="btn" id="addStudent" onclick="submitStudent()">Add Student</button>
+                <button type="button" class="btn cancel" onclick="closeAddStudentForm()">Close</button>
+            </form>
+        </div>
+    
+        <!--Add Staff form-->
+        <div class="form-popup" id="addStaffForm">
+            <form class="form-container" onsubmit="return false">
+    
+                <label for="staffid"><b>Staff ID*</b></label>
+                <input type="text" placeholder="Enter Staff ID" name="idStaff" id="idStaff" required >
+    
+                <label for="staffname"><b>First Name*</b></label>
+                <input type="text" placeholder="Enter First Name" name="firstNameStaff" id="firstnameStaff" required>
+    
+                <label for="stafflname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lastNameStaff" id="lastnameStaff" >
+    
+                <label for="staffdob"><b>Date of Birth</b></label>
+                <input type="date" name="dobStaff" id="dobStaff">
+    
+                <fieldset>
+                    <label for="staffgender"><b>Gender</b></label><br>
+                    <input type="radio" value="Male" name="genderStaff" id="genderStaff" >
+                    <label>Male</label>
+                    <input type="radio" value="Female" name="genderStaff" id="genderStaff" >
+                    <label>Female</label>
+                </fieldset>
+    
+                <label for="staffemail"><b>Email*</b></label><br>
+                <input type="email" placeholder="Enter Email" name="emailStaff" id="emailStaff" required >
+    
+                <button type="submit" class="btn" id="addStaff" onclick="submitStaff()">Add Staff</button>
+                <button type="button" class="btn cancel" onclick="closeAddStaffForm()">Close</button>
+            </form>
+        </div>
+    
+        <div class="adminPage-container" id="adminPageList">
+            <div class="centerC" id="ssBtn">
+                <button class="btnn" onclick="displayStudentCRUD()" id="studentsButton">Students</button>
+                <button class="btnn" onclick="displayStaffCRUD()" id="staffButton">Staffs</button>
+            </div>
+            <div class="centerC" id="cruds">
+                <div class="studentCrud" id="studentCrud">
+                    <button class="btnn" onclick="openAddStudentForm()" id="openAddStudentForm">Add</button>
+                    <button class="btnn" onclick="" id="">Delete</button>
+                    <button class="btnn" onclick="" id="">Update</button>
+                </div>
+                <div class="staffCrud" id="staffCrud">
+                    <button class="btnn" onclick="openAddStaffForm()" id="openAddStaffForm">Add</button>
+                    <button class="btnn" onclick="" id="">Delete</button>
+                    <button class="btnn" onclick="" id="">Update</button>
+                </div>
+            </div>
+            <div>
+                <div class="studentList" id="studentList">
+                    <table id="listOfStudents">
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>DOB</th>
+                            <th>Gender</th>
+                            <th>Department</th>
+                            <th>Email</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>Aaron</td>
+                            <td>Bach</td>
+                            <td>20.05.1995</td>
+                            <td>Male</td>
+                            <td>AI</td>
+                            <td>s0563346@htw-berlin.de</td>
+                        </tr>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </div>
+                <div class="staffList" id="staffList">
+                    <table id="listOfStaffs">
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>DOB</th>
+                            <th>Gender</th>
+                            <th>Email</th>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>Aaron</td>
+                            <td>Bach</td>
+                            <td>20.05.1995</td>
+                            <td>Male</td>
+                            <td>s0563346@htw-berlin.de</td>
+                        </tr>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+    
+    
+                </div>
+            </div>
+    
+    
+        </div>
+    
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

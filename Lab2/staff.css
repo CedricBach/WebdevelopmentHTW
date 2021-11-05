@@ -1,0 +1,19 @@
+.studentList{
+    display: none;
+}
+
+.buttonS{
+    
+  display: inline-block;
+  padding: 3px 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: grey;
+  border: none;
+  border-radius: 15px;
+}
+
+.buttonS:hover {background-color: black}

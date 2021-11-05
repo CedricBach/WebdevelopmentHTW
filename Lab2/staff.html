@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="staff.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Lab2</title>
+</head>
+<body>
+    <h1>Welcome to the Staff Dashboard</h1>
+    
+    <div class="courseList" id="courseList">
+        <table id="listOfCourses">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Webdevelopment</td>
+                <td>Friday</td>
+                <td>14:00-15:30</td>
+                <td><button class="buttonS" onclick="toggleStudents();" id="toggleS">Show students</button></td>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="studentList" id="studentList">
+        <table id="studentsInCourse">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Aaron Bach</td>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="staff.js"></script>
+</body>
+</html>
