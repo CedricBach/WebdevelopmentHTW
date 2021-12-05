@@ -1,0 +1,68 @@
+.adminPage-container{
+    display: block;
+    margin: auto;
+}
+
+.btnn{
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 280px;
+    margin-bottom:10px;
+    opacity: 0.8;
+    margin: 5px;
+}
+
+.filterSelect{
+    padding: 16px 20px;
+    width: 280px;
+    margin-bottom:10px;
+    opacity: 0.8;
+    margin: 5px;
+}
+
+.studentCrud{
+    display:none;
+    height: 150px;
+}
+  
+.studentList{
+    display:none;
+}
+  
+.staffCrud{
+    display:none;
+    height: 150px;
+}
+  
+.staffList{
+    display:none;
+}
+
+.studentGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.staffGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+    
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 1 / 4 / 2 / 5; }
+.div5 { grid-area: 1 / 5 / 2 / 6; } 
+    
+#dontShow {
+    display:none;
+}

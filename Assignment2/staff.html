@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="staff.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Lab2</title>
+</head>
+<body>
+    <h1>Welcome to the Staff Dashboard</h1>
+    
+    <div class="courseList" id="courseList">
+        <table id="listOfCourses">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Webdevelopment</td>
+                <td>Friday</td>
+                <td>14:00-15:30</td>
+                <td><button class="buttonS" onclick="toggleStudents();" id="toggleS">Show students</button></td>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <div id="dontShow"><h4>Filter Students:</h4></div>
+    <div id="dontShow2">
+        <select class="filterSelect" name="filterStudentD" id="filterStudentD" onchange="filterStudentsD()">
+            <option value="AI">AI</option>
+            <option value="CS">CS</option>
+            <option value="Jura">Jura</option>
+        </select>
+        <select class="filterSelect" name="filterStudentS" id="filterStudentS" onchange="filterStudentsS()">
+            <option value="Winter">Winter</option>
+            <option value="Summer">Summer</option>
+        </select>
+    </div>
+    <div class="studentList" id="studentList">
+        <table id="listOfStudents">
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Email</th>
+                <th>Joining Date</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Aaron</td>
+                <td>Bach</td>
+                <td>20.05.1995</td>
+                <td>Male</td>
+                <td>AI</td>
+                <td>s0563346@htw-berlin.de</td>
+                <td>2015-01-01</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Aaron</td>
+                <td>Bach</td>
+                <td>20.05.1995</td>
+                <td>Male</td>
+                <td>Jura</td>
+                <td>s0563346@htw-berlin.de</td>
+                <td>2015-05-01</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Aaron</td>
+                <td>Bach</td>
+                <td>20.05.1995</td>
+                <td>Male</td>
+                <td>CS</td>
+                <td>s0563346@htw-berlin.de</td>
+                <td>2015-06-01</td>
+            </tr>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="staff.js"></script>
+</body>
+</html>

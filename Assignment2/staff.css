@@ -1,0 +1,36 @@
+.studentList{
+    display: none;
+}
+
+#dontShow{
+  display: none;
+}
+#dontShow2{
+  display: none;
+}
+
+.buttonS{
+    
+  display: inline-block;
+  padding: 3px 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: grey;
+  border: none;
+  border-radius: 15px;
+}
+
+.buttonS:hover {background-color: black}
+
+
+.filterSelect{
+  padding: 16px 20px;
+  width: 280px;
+  margin-bottom:10px;
+  opacity: 0.8;
+  margin: 5px;
+  height: 70px;
+}

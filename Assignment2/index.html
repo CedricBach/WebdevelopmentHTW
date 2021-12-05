@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>LAB2</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+	</head>
+	<body>
+    <div>
+    
+      <!--Loginform-->
+      <div class="loginWindow">
+        <form name="login" class="form-container" action="./admin.html" onsubmit="return validateAdmin()">
+          <h1>Login</h1>
+      
+          <label for="role">Role</label>
+          <select id="roleChoice">
+            <option value="./admin.html" selected="selected">Admin</option>
+            <option value="./staff.html">Staff</option>
+          </select><br>
+
+          <label for="adminname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="adminname" id="adminname" required>
+      
+          <label for="adminpsw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="adminpsw" id="adminpsw" required>
+      
+          <button type="submit" class="btn" id="login1">Login</button>
+        </form>
+      </div>
+  
+    
+
+    
+    
+    <script src="index.js"></script>  
+	</body>
+
+  
+</html>
+
